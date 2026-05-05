@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Gosuslugi Form Dictionaries",
+  "version": "1.0.0",
+  "description": "Справочники и автозаполнение повторяющихся данных на формах Госуслуг.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://*.gosuslugi.ru/*"],
+  "action": {
+    "default_title": "Справочники Госуслуг",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.gosuslugi.ru/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
