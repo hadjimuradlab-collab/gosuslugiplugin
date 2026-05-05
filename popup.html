@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Справочники Госуслуг</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 12px; width: 360px; }
+    h2 { margin: 8px 0 4px; font-size: 14px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+    input { width: 100%; box-sizing: border-box; margin: 4px 0; padding: 6px; }
+    button { margin-top: 6px; padding: 6px 10px; cursor: pointer; }
+    .row { display: flex; gap: 6px; }
+    .row > * { flex: 1; }
+    .hint { color: #666; font-size: 12px; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="hint">Добавьте записи в справочники, затем на форме Госуслуг нажмите «Автозаполнить».</div>
+
+  <div class="card">
+    <h2>Форма 1 — Проектировщик</h2>
+    <input id="f1_lastName" placeholder="Фамилия" />
+    <input id="f1_firstName" placeholder="Имя" />
+    <input id="f1_middleName" placeholder="Отчество" />
+    <input id="f1_certificateNumber" placeholder="Номер квалификационного аттестата" />
+    <input id="f1_certificateDate" placeholder="Дата квалификационного аттестата (ДД.ММ.ГГГГ)" />
+    <button data-form="form1">Сохранить в справочник</button>
+  </div>
+
+  <div class="card">
+    <h2>Форма 2 — Ответственный работник</h2>
+    <input id="f2_lastName" placeholder="Фамилия" />
+    <input id="f2_firstName" placeholder="Имя" />
+    <input id="f2_middleName" placeholder="Отчество" />
+    <input id="f2_snils" placeholder="СНИЛС" />
+    <button data-form="form2">Сохранить в справочник</button>
+  </div>
+
+  <div class="card">
+    <h2>Форма 3 — Работник</h2>
+    <input id="f3_lastName" placeholder="Фамилия" />
+    <input id="f3_firstName" placeholder="Имя" />
+    <input id="f3_snils" placeholder="СНИЛС" />
+    <button data-form="form3">Сохранить в справочник</button>
+  </div>
+
+  <div class="card">
+    <h2>Форма 4 — Оборудование</h2>
+    <input id="f4_name" placeholder="Наименование" />
+    <input id="f4_serial" placeholder="Заводской (серийный) номер" />
+    <input id="f4_verificationNumber" placeholder="Номер свидетельства о поверке" />
+    <input id="f4_verificationDate" placeholder="Дата свидетельства о поверке (ДД.ММ.ГГГГ)" />
+    <button data-form="form4">Сохранить в справочник</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
